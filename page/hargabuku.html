@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga Buku</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="https://www.perpusnas.go.id/"><img src="../assets/img/logo2.webp" alt="logo" class="logo"></a>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="../index.html#jenisbuku">Jenis Buku</a></li>
+                <li><a href="#">Harga Buku</a></li>
+                <li><a href="../page/kontakkami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <section class="hargabuku-section" id="layanan">
+        <h2>Harga Buku</h2>
+        <table class="hargabuku-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Layanan Kami</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                    <th>Pinjam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Laskar Pelangi</td>
+                    <td>Novel</td>
+                    <td>Rp15.000/minggu</td>
+                    <td><a href="../page/datapeminjam.html" class="btn-primary">Pesan</a></td>
+                <tr>
+                    <td>2</td>
+                    <td>Ayah</td>
+                    <td>Novel</td>
+                    <td>Rp15.000/minggu</td>
+                    <td><a href="../page/datapeminjam.html" class="btn-primary">Pesan</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Perahu Kertas</td>
+                    <td>Novel</td>
+                    <td>Rp15.000/minggu</td>
+                    <td><a href="../page/datapeminjam.html" class="btn-primary">Pesan</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hafalan Shalat Delisa</td>
+                    <td>Novel</td>
+                    <td>Rp15.000/minggu</td>
+                    <td><a href="../page/datapeminjam.html" class="btn-primary">Pesan</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script type="text/javascript">
+        //deklarasi tombol dan menu
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+        tombol.addEventListener("click",() => {
+            menu.classList.toggle("aktif");
+        });
+    </script>
+</body>
+</html>

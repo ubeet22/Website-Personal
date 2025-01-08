@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="logo">INV</a>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="../page/jenisbarang.html">Jenis Barang</a></li>
+                <li><a href="../page/datapeminjam.html">Formulir</a></li>
+                <li><a href="../page/KritikSaran.html">Kritik&Saran</a></li>
+                <li><a href="#">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <section class="alamat-section" id="alamat">
+        <h2>Hubungi Kami</h2>
+        <table class="alamat-table">
+            <thead>
+                <tr>
+                    <th>Forum</th>
+                    <th>Alamat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Email</td>
+                    <td>kawakibiube@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Nomor Telpon</td>
+                    <td>+62 821-6704-1731</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+        tombol.addEventListener("click",() => {
+            menu.classList.toggle("aktif");
+        });
+    </script>
+</body>
+</html>

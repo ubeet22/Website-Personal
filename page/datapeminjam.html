@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Peminjam</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="logo">INV</a>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="../page/jenisbarang.html">Jenis Barang</a></li>
+                <li><a href="#">Formulir</a></li>
+                <li><a href="../page/KritikSaran.html">Kritik&Saran</a></li>
+                <li><a href="../page/kontakkami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <section class="contact-section" id="contact">
+        <h2>Isi Formulir</h2>
+        <form action="outputform.html" method="get" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nama Peminjam:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan Nama Lengkap" required>
+            </div>
+            <div class="form-group">
+                <label>Nama Petugas:</label>
+                <select name="petugas" id="petugas" class="form-group">
+                    <option value="Pak Supri">Pak Supri</option>
+                    <option value="Pak Harto">Pak Harto</option>
+                    <option value="Pak Firman">Pak Firman</option>
+                    <option value="Pak Sapta">Pak Sapta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notelp">Nomor Telpon:</label>
+                <input type="text" id="telp" name="notelp" maxlength="12" placeholder="Masukkan Nomor Telpon " required>
+            </div>
+            <div class="form-group">
+                <label for="name">Kelas:</label>
+                <input type="text" id="kelas" name="name" placeholder="Masukkan Kelas" required>
+            </div>
+            <div class="form-group">
+                <label>Barang Yang Dipinjam:</label>
+                <select class="form-group" name="barang" id="barang">
+                    <option value="LCD">LCD</option>
+                    <option value="Kabel Rol">Kabel Rol</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Speaker">Speaker</option>
+                    <option value="Obeng">Obengr</option>
+                    <option value="Tang">Tang</option>
+                    <option value="Kipas Angin">Kipas Angin</option>
+                    <option value="Speaker">Speaker</option>
+                    <option value="Kabel VGA">Kabel VGA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Tp">Tanggal Peminjaman:</label>
+                <input type="date" id="Tp" name="Tp" required>
+            </div>
+            <div class="form-group">
+                <label for="jam">Jam Peminjaman:</label>
+                <input type="time" id="jam" name="jam" required>
+            </div>
+            <br><br>
+            <br><br>
+                <button type="submit" class="detail" onclick="addData()">Kirim</button>
+                <button type="reset" class="detail">Cancel</button>
+        </form>
+    </section>
+    <h2 style="text-align: center;">Data Peminjam</h2>
+    <div class="table-responsive">
+        <table border="1" id="userTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Peminjam</th>
+                    <th>Nama Petugas</th>
+                    <th>Nomor Telpon</th>
+                    <th>Kelas</th>
+                    <th>Barang Yang Dipinjam</th>
+                    <th>Tanggal Peminjaman</th>
+                    <th>Jam Peminjaman</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script>
+        function printStruk(index) {
+            const user = users[index];
+        
+            localStorage.setItem('strukData', JSON.stringify(user));
+            window.open('outputform.html', '_blank');
+        }
+    </script>
+    <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+        tombol.addEventListener("click",() => {
+            menu.classList.toggle("aktif");
+        });
+    </script>
+</body>
+</html>

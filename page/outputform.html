@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Data Peminjam</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+            margin-top: 70px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color:black;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        @media print {
+                body {
+                    -webkit-print-color-adjust: exact; 
+                }
+            }
+        
+    </style>    
+</head>
+<body>
+    <script src="../js/bootstrap.bundle.min.js"></script>   
+    <nav class="navbar" >
+        <div class="container">
+            <a href="" class="logo">INV</a>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="../page/jenisbarang.html">Jenis Barang</a></li>
+                <li><a href="../page/datapeminjam.html">Formulir</a></li>
+                <li><a href="../page/KritikSaran.html">Kritik&Saran</a></li>
+                <li><a href="../page/kontakkami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <h2><b>Struk Peminjaman</b></h2>
+    <div class="container">
+        <table id="strukTable"></table>
+    </div>
+    <button class="detail" onclick="window.print()">Cetak</button>
+    <script>
+        const strukData = JSON.parse(localStorage.getItem('strukData'));
+        if (strukData) {
+            const table = document.getElementById('strukTable');
+            table.innerHTML = `
+                <tr><td>Nama Peminjam</td><td>${strukData.name}</td></tr>
+                <tr><td>Nama Petugas</td><td>${strukData.petugas}</td></tr>
+                <tr><td>Nomor Telpon</td><td>${strukData.telp}</td></tr>
+                <tr><td>Kelas</td><td>${strukData.kelas}</td></tr>
+                <tr><td>Barang Yang Dipinjam</td><td>${strukData.barang}</td></tr>
+                <tr><td>Tanggal Peminjaman</td><td>${strukData.Tp}</td></tr>
+                <tr><td>Jam Peminjaman</td><td>${strukData.jam}</td></tr>
+            `;
+        } else {
+            document.body.innerHTML = '<p>Data struk tidak ditemukan.</p>';
+        }
+    </script>
+    <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+        tombol.addEventListener("click",() => {
+            menu.classList.toggle("aktif");
+        });
+    </script>    
+</body>
+</html>

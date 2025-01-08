@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaris Barang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="logo">INV</a>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="page/jenisbarang.html">Jenis Barang</a></li>
+                <li><a href="page/datapeminjam.html">Formulir</a></li>
+                <li><a href="page/KritikSaran.html">Kritik&Saran</a></li>
+                <li><a href="page/kontakkami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>  
+    <section class="welcome-section" id="welcome">
+        <div class="welcome-text">
+            <h1>Selamat Datang</h1>
+            <p style="margin-bottom: 40px;">
+                Selamat datang di Inventaris Barang online kami
+            </p>
+            <a href="#tentang" class="detail">Lihat Detail</a>
+        </div>
+    </section>
+    <section class="tentang-section" id="tentang">
+        <div class="image-container">
+            <img src="assets/img/sarpras2.jpg" alt="Deskripsi Gambar" class="gambar-tentang">
+        </div>
+        <div class="text-container">
+            <h2>Inventaris Barang</h2>
+            <p>Inventarisasi barang merupakan kegiatan untuk melakukan pencatatan dan pendaftaran barang pada suatu saat tertentu.Pinjam lah barang dengan bijak!</p>
+            <a href="page/jenisbarang.html" class="detail">Lihat Barang</a>
+        </div>
+    </section>
+    <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+        tombol.addEventListener("click",() => {
+            menu.classList.toggle("aktif");
+        });
+    </script>
+</body> 
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Barang</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="logo">INV</a>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="#">Jenis Barang</a></li>
+                <li><a href="../page/datapeminjam.html">Formulir</a></li>
+                <li><a href="../page/KritikSaran.html">Kritik&Saran</a></li>
+                <li><a href="../page/kontakkami.html">Kontak Kami</a></li>
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+    </nav>
+    <section class="barang-section" id="jenisbarang">
+        <h2 style="text-align: center; font-size: 50px;">Jenis Barang</h2>
+        <div class="barang-container">
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/proyektor.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Proyektor Epson</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/speaker.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Speaker Horeg</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/kabelrol.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Kabel Rol</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/laptop.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Laptop </h5>
+                      <a href="../page/datapeminjam.html"style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/ka.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Kipas Angin</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/obeng.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Obeng</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/vga.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Kabel VGA</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../assets/img/tang.jpg"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tang Tumpul</h5>
+                      <a href="../page/datapeminjam.html" style="background-color: black;" class="btn btn-primary">Pinjam</a>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+        tombol.addEventListener("click",() => {
+            menu.classList.toggle("aktif");
+        });
+    </script>
+</body>
+</html>
